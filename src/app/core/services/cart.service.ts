@@ -2,7 +2,8 @@ import { CartComponent } from './../../componets/cart/cart.component';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { envirnment } from './environments/environment';
+import { envirnment
+ } from './environments/environment';
 
 @Injectable({
   providedIn: 'root'

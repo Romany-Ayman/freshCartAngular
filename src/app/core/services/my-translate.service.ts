@@ -2,7 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { Injectable, PLATFORM_ID, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-@Injectable({
+@Injectable ({
   providedIn: 'root',
 })
 export class MyTranslateService {
@@ -11,9 +11,10 @@ export class MyTranslateService {
 
   constructor() {
     if (isPlatformBrowser(this._PLATFORM_ID)) {
-      let savedlang = localStorage.getItem('lang');
-      this._TranslateService.setDefaultLang('en');
-      this._TranslateService.use(savedlang!);
+
+      const savedlang = localStorage.getItem('lang') ||'en'; 
+      this._TranslateService.setDefaultLang(savedlang);
+      this._TranslateService.use(savedlang);
       this.changeDirection();
     }
   }

@@ -6,3 +6,15 @@
   
     
 }
+.upbuton{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #09c;
+    transition: all .5s;
+
+}
+.upbuton:hover{
+    background-color: violet;
+    color:#fff;
+}
